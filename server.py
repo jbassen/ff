@@ -1,5 +1,5 @@
 import os
-from flask import Flask, render_template
+from flask import Flask, render_template, make_response
 
 app = Flask(__name__)
 
@@ -9,6 +9,7 @@ app = Flask(__name__)
 @app.route('/start')
 def commence():
     return render_template('ff_start.html')
+
 
 @app.route('/activity/<id>')
 def activity():
